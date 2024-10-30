@@ -1,248 +1,194 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-
-  <!-- Put your site title here -->
-  <title>
-    Evan King | A Game Developer
-  </title>
-
-  <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
-  <link rel="stylesheet" href="index.css" />
-</head>
-
-<body>
-
-  <!-- ***** Header ***** -->
-
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
-          <span>Evan King</span>
-        </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p>A Game Developer.</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
-      </div>
-    </div>
-  </header>
-
-  <main role="main">
-
-    <!-- ***** Work ***** -->
-
-    <section class="work" id="work">
-      <div class="row">
-        <h2>My Work</h2>
-        <div class="work__boxes">
-
-          <!-- Each div with the work__box class is a project. -->
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>FirstGame</h3>
-              <p>
-                  Boop-It is a first-person rhythm platformer where the player speeds through levels by platforming to the beat with their Boop Gun.
-                  <br />
-                  <br /> My role in the project was to design and implement the enemy AI, as well as the level design for 7 of the 15 levels.
-              </p>
-              <ul class="work__list">
-                <li>C++</li>
-                <li>Unity</li>
-              </ul>
-
-              <!--<div class="work__links">
-                <a href="https://sloz.itch.io/boop-it" target="_blank" class="link__text">
-                  The Game <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/RyanHewitt/DapperSunsRepository" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>-->
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <meta name="description" content="Evan King's Portfolio" />
+        <meta name="author" content="Evan King" />
+        <title>Evan King Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+     </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Evan King</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.png" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#work">My Work</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li> -->
+                </ul>
             </div>
-            <div class="work__image-box">
-                <img src="./images/project-1.png" class="work__image" alt="Project 1" />
-                <!--<iframe width="420" height="315"
-                        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
-                </iframe>-->
-            </div>
-          </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Evan King
+                        <!-- <span class="text-primary">King</span>
+                    </h1> -->
+                    <div class="subheading mb-5">
+                        Winter Park, Florida · (713) 876-1158 ·
+                        <a href="mailto:edking143@gmail.com" style="color: #123c7c;">
+                            <strong style="color: #123c7c; font-weight: normal;">edking143@gmail.com</strong>
+                          </a>
+                    </div>
+                    <h2 class="mb-5">About</h2>
+                    <p>I am a student of Full Sail University working towards a degree in Game Development. During my studies, I honed my skills in programming languages and tools such as C++ and gained hands-on experience with game engines such as Unity and Unreal Engine 5 as well as Blueprints.</p>
+                    <br>
+                    <br>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/evanking143/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/kingdomempire"><i class="fab fa-github"></i></a>
+                        <!-- <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a> -->
+                        <!-- <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a> -->
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- My Work-->
+            <section class="resume-section" id="work">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">My Work</h2>
 
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Second Game</h3>
-              <p>
-                  an unfinished project that was meant to be a Rougelike with a focus on exploration and combat throught a randomly generated Dungeon.
-                  <br />
-                  <br /> my role in this project was to make the randomly generated Dungeon, the shop room, and items.
-              </p>
-              <ul class="work__list">
-                <li>Unreal Engine 5</li>
-                <li>Blueprints</li>
-              </ul>
-
-              <!--<div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>-->
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <!--<div class="work__box">
-            <div class="work__text">
-              <h3>Notificator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
-            </div>
-          </div>-->
-        <!--</div>
-      </div>-->
-    </section>
-
-    <!-- ***** Clients ***** -->
-
-    <!--<section class="client" id="clients">
-      <div class="row">
-        <h2>Clients</h2>
-        <div class="client__logos">-->
-          <!-- Add logos of the clients or companies you'have worked with. -->
-          <!--<img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
-          <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
-          <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
-          <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
-          <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
-          <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
+                    <div class="work__box">
+                        <div class="work__text">
+                        <h3>FirstGame</h3>
+                    </div>
+                        <div class="work__image-box">
+                            <img class="img-fluid" src="./assets/img/project-1800x600.png" class="work__image" alt="Project 1" />
+                            <!--<iframe width="420" height="315"
+                                    src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+                            </iframe>-->
+                        </div>
+                    </div>
+                    <br>
+                        <p>
+                            Boop-It is a first-person rhythm platformer where the player speeds through levels by platforming to the beat with their Boop Gun.
+                            </p>  
+                            <br />
+                            My role in the project was to design and implement the enemy AI,
+                            as well as the level design for 7 of the 15 levels.
+                        </p>
+                        <ul class="work__list">
+                            <li>C++</li>
+                            <li>Unity</li>
+                        </ul>
+                        <br>
+                        <hr size="5" width="85%" align="left" color="##000000">
+                        <br>
+                    <div class="work__box">
+                        <div class="work__text">
+                        <h3>Second Game</h3>
+                        </div>
+                        <div class="work__image-box">
+                        <img class="img-fluid" img src="./assets/img/project-2800x600.png" class="work__image" alt="Project 1" />
+                        </div>
+                    </div>
+                    <br>
+                        <p>
+                            A project that was meant to be a Rougelike gane with a focus on 
+                            exploration and combat throught a randomly generated Dungeon.
+                            <br />
+                            <br /> My role in this project was to make the randomly generated Dungeon,
+                            the shop room, and items.
+                        </p>
+                        <ul class="work__list">
+                            <li>Unreal Engine 5</li>
+                            <li>Blueprints</li>
+                        </ul>
+                        <br>
+                        <hr size="5" width="85%" align="left" color="##000000">
+                        <br>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" /> 
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Full Sail University, Winter Park Florida</h3>
+                            <div class="subheading mb-3">Bachelor of Game Development</div>
+                            <div>Artifical Intennigence  -  Engine Development  - Data Structure and Algorithms</div>
+                            <!-- <p>GPA: 3.23</p> -->
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">July 2022 - February 2025</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />            
+            <section class="resume-section" id="contact">
+                <div class="resume-section-content">                       
+                    <h2 class="mb-5">Contact</h2>
+            <div class="container">
+                </div> 
+                <br> 
+                <div class="text-center"></div>
+                <div class="row">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4">
+                    <div class="d-flex flex-column align-items-center"><br>    
+                        <div class="text-muted">Link to my resume</div>
+                            <a href="assets/pdf-files/EvanKingResume.pdf"><br>
+                                <button>Resume</button></div></a><br><br>
+                    </div> 
+                </div>    
+                <div class="text-center"></div>
+                <div class="row">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4">
+                            <div class="d-flex flex-column align-items-center">
+                                <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
+                                <div class="text-muted">Phone</div>
+                                <div class="lead font-weight-bold">(713) 876-1158</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="d-flex flex-column align-items-center">
+                                <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
+                                <div class="text-muted">Email</div><a class="lead font-weight-bold" href="mailto:edking143@gmail.com">edking143@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>    
+                    <!-- <img class="mobileShow" class="img-fluid" src="assets/img/profile.png" style="display: none;"> -->
+                    <!-- <img class="mobileShow"  border="0" height="50" src="assets/img/profile.png" style="display: none;" width="250">
+                    <br>
+                    <h2>Contact</h2>
+                    <div class="contact__info">
+                      <p>
+                        To reach me is via email.
+                      </p>
+                      <a href="mailto:edking143@gmail.com" style="color: #123c7c; font-size: larger;">
+                        <strong style="color: #123c7c; font-size: larger; font-weight: normal;">edking143@gmail.com</strong>
+                      </a>
+                    </div>
+                  </div>
+            </section> -->
         </div>
-      </div>
-    </section>-->
-
-    <!-- ***** About ***** -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-              <p>
-                  Hello! I’m a student of Fullsail University working towards a degree in Game Development, fueled by a lifelong passion for creating immersive gaming experiences. During my studies, I honed my skills in programming languages like C++, and gained hands-on experience with game engines such as Unity and Unreal Engine.
-
-                  I thrive on the creative process of game design—from concept to completion. My first project, a 3D rhythm platformer, allowed me to collaborate with a team, where I focused on level design and enemy gameplay mechanics. I’m excited to bring my technical skills and innovative ideas to a dynamic development team.
-              </p>
-            <!-- Provide a link to your resume -->
-            <a href="https://docs.google.com/document/d/1w1SCUfLlyJ9JW32GpI0cBy96w_axuBWS/edit?usp=sharing&ouid=110034162623704507211&rtpof=true&sd=true" class="btn">My Resume</a>
-          </div>
-
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/selfpic.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ***** Contact ***** -->
-
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <p>
-          The quickest way to reach out to
-          me is via an email.
-        </p>
-        <!-- Replace the email with yours -->
-        <a href="mailto:edking143@gmail.com" class="btn">edking143@gmail.com</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ***** Footer ***** -->
-
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <!-- Update the links to point to your accounts -->
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://github.com/Kingdomempire/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/evanking143">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
-      </ul>
-
-       <!--If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. 
-      <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
-      </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
-      </div>
-    </div>
-  </footer>-->
-
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
-  </a>
-  <script src="./index.js"></script>
-</body>
-
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
