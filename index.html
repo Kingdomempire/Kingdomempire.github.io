@@ -14,6 +14,35 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+        .text-box {
+            width: 1000px;       /* Set the width of the box */
+            height: 800px;      /* Set the height of the box */
+            border: 1px solid #000;  /* Border around the box */
+            padding: 10px;      /* Space inside the box */
+            overflow: auto;     /* Allows scrolling if text overflows */
+            margin-left: 300px; /* Indentation from the left margin */
+            margin-top: 20px; /* Space above the box */
+            background-color: #f9f9f9; /* Light background color */
+            font-family: Arial, sans-serif; /* Font style */
+        }
+        
+        .download-links {
+            margin-top: 20px; /* Space between the box and the links */
+            margin-right: 50px; /* Indentation for the links */
+        }
+        
+            p.small {
+              line-height: 1.7;
+            }
+        </style>    
+        <style>
+                .my-table {
+                  width: 75%;
+                }
+        </style>
+            
+            
      </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -29,6 +58,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#work">My Work</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#resume">Resume</a></li>
                     <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li> -->
                     <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li> -->
                 </ul>
@@ -40,13 +70,12 @@
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
                     <h1 class="mb-0">
-                        Evan King
+                        <h2>Evan D. King</h2>
                         <!-- <span class="text-primary">King</span>
                     </h1> -->
                     <div class="subheading mb-5">
                         Winter Park, Florida · (713) 876-1158 ·
-                        <a href="mailto:edking143@gmail.com" style="color: #123c7c;">
-                            <strong style="color: #123c7c; font-weight: normal;">edking143@gmail.com</strong>
+                            <a href="mailto:edking143@gmail.com">edking143@gmail.com</a>
                           </a>
                     </div>
                     <h2 class="mb-5">About</h2>
@@ -81,10 +110,10 @@
                     <br>
                         <p>
                             Boop-It is a first-person rhythm platformer where the player speeds through levels by platforming to the beat with their Boop Gun.
-                            </p>  
-                            <br />
-                            My role in the project was to design and implement the enemy AI,
-                            as well as the level design for 7 of the 15 levels.
+                        </p>  
+                        <br>
+                        <p>
+                            My role in the project was to design and implement the enemy AI, as well as the level design for 7 of the 15 levels.
                         </p>
                         <ul class="work__list">
                             <li>C++</li>
@@ -103,11 +132,10 @@
                     </div>
                     <br>
                         <p>
-                            A project that was meant to be a Rougelike gane with a focus on 
-                            exploration and combat throught a randomly generated Dungeon.
-                            <br />
-                            <br /> My role in this project was to make the randomly generated Dungeon,
-                            the shop room, and items.
+                            A project that was meant to be a Rougelike gane with a focus on exploration and combat throught a randomly generated Dungeon.
+                        </p>
+                        <br>
+                        My role in this project was to make the randomly generated Dungeon, the shop room, and items.
                         </p>
                         <ul class="work__list">
                             <li>Unreal Engine 5</li>
@@ -126,32 +154,21 @@
                     <h2 class="mb-5">Education</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Full Sail University, Winter Park Florida</h3>
+                            <h3 class="mb-0">Full Sail University, Winter Park, Florida</h3>
                             <div class="subheading mb-3">Bachelor of Game Development</div>
-                            <div>Artifical Intennigence  -  Engine Development  - Data Structure and Algorithms</div>
+                            <div>Artifical Intelligence  -  Engine Development  - Data Structure and Algorithms</div>
                             <!-- <p>GPA: 3.23</p> -->
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">July 2022 - February 2025</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary"><h4>July 2022 - February 2025</h4></span></div>
                     </div>
                 </div>
             </section>
-            <hr class="m-0" />            
+            <hr class="m-0" />    
+            <!-- Contact-->        
             <section class="resume-section" id="contact">
                 <div class="resume-section-content">                       
                     <h2 class="mb-5">Contact</h2>
-            <div class="container">
-                </div> 
-                <br> 
-                <div class="text-center"></div>
-                <div class="row">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4">
-                    <div class="d-flex flex-column align-items-center"><br>    
-                        <div class="text-muted">Link to my resume</div>
-                            <a href="assets/pdf-files/EvanKingResume.pdf"><br>
-                                <button>Resume</button></div></a><br><br>
-                    </div> 
-                </div>    
+            <div class="container"></div> 
                 <div class="text-center"></div>
                 <div class="row">
                     <div class="row justify-content-center">
@@ -159,7 +176,7 @@
                             <div class="d-flex flex-column align-items-center">
                                 <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
                                 <div class="text-muted">Phone</div>
-                                <div class="lead font-weight-bold">(713) 876-1158</div>
+                                <div class="lead font-weight-bold"><h4>(713) 876-1158</h4></div>
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -170,22 +187,71 @@
                         </div>
                     </div>
                 </div>
-            </section>    
-                    <!-- <img class="mobileShow" class="img-fluid" src="assets/img/profile.png" style="display: none;"> -->
-                    <!-- <img class="mobileShow"  border="0" height="50" src="assets/img/profile.png" style="display: none;" width="250">
+            </section>
+            <hr class="m-0" />
+            <!-- Resume-->
+            <section class="resume-section" id="resume">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Resume</h2>  
                     <br>
-                    <h2>Contact</h2>
-                    <div class="contact__info">
-                      <p>
-                        To reach me is via email.
-                      </p>
-                      <a href="mailto:edking143@gmail.com" style="color: #123c7c; font-size: larger;">
-                        <strong style="color: #123c7c; font-size: larger; font-weight: normal;">edking143@gmail.com</strong>
-                      </a>
+                    <div>
+                        <h4>Resume Download Options:</h4>
+                        <a href="https://kingdomempire.github.io/assets/pdf-files/EvanKingResume.pdf" download>Download as PDF</a><br>
+                        <a href="https://kingdomempire.github.io/assets/docx/EvanKingResume.docx" download>Download as DOCX</a>
                     </div>
-                  </div>
-            </section> -->
+                    <br>
+                        <hr size="5" width="85%" align="left" color="##000000">  
+                    <p class="small">   
+                        <h3>Evan D. King</h3>
+                        <h4>Game Developer</h4>
+                        </p>
+                        
+                        <p class="small">
+                        Email: edking143@gmail.com<br>
+                        Mobile: (713) 875-1158<br>
+                        <strong>Portfolio: </strong><a href="https://kingdomempire.github.io/"><u>kingdomempire.github.io</u></a><br>
+                        <strong>in: </strong><a href="https://www.linkedin.com/in/evanking139/"><u>linkedin/in/evanking143</u></a></p>
+                        <h3><strong>SUMMARY</strong></h3>
+                    <div class="box">
+                            Recent Game Developer graduate with a passion for game development and a solid foundation in programming, algorithms, and software engineering principles. Proficient in C++, C#, Unity and Unreal Engine, with hands-on experience in designing and implementing game mechanics, developing interactive environments. Eager to apply creative problem-solving skills and technical expertise to contribute to innovative game projects. Strong collaborative skills, demonstrated through successful team projects and a commitment to continuous learning and professional growth in the gaming industry.
+                    </div>
+                        <p class="small"></p>
+                        <h3><strong>SOFTWARE</strong></h3>
+                    <div class="box">
+                        Programming Languages: C++, C#, Unreal Engine 5 Blueprints<br>
+                        Software: Visual Studio 2022, Unity, Unreal Engine 5<br>
+                    </div>
+                    <p class="small"></p>
+                        <h3><strong>TECHNICAL SKILLS</strong></h3>
+                    <div class="box">
+                            Hands-on programming skills to excel in the world of game development utilizing; C++, C#, Java and Artificial Intelligence used in the game development cycle from preproduction to finished product, including; Computer Graphics, Computer Architecture, AI and Software Engineering, Digital Logic, Game Architecture and GitHub for version control and team collaboration. Developed techniques for designing and creating intelligent and lifelike behaviors in characters in order to provide realism and computer opponents that continue to challenge players even after repeated game play.
+                        </div>
+                        <p class="small"></p>
+                        <h3><strong>PROJECTS and DEVELOPMENT EXPERIENCE</strong></h3>
+                    <div class="box">
+                            Develop, and produce from start to finish a 3D game. Enemy Creation: Created 2 unique enemies and 2 Boss enemies using C++, that had behaviors that challenged players strategies and added depth to game play. Random Dungeon Generator: Developed a blueprint-based dungeon generator in Unreal Engine 5, adding randomized challenges and environments that adapted to player exploration and progress.
+                    </div>  
+                        <p class="small"></p>
+                        <h3><strong>ADDITIONAL SKILLS</strong></h3>
+                        <div class="box">
+                            Excellent communication and interpersonal skills, ability to work within a group or on my own, Strong knowledge of game development tools, languages, and frameworks. Experienced in creating and delivering high quality game designs.
+                        </div>
+                        <p class="small"></p>
+                        <h3><strong>Leadership</strong></h3>
+                    <div class="box">
+                         Eagle Scout - May 5, 2022<br>
+                         Completed Eagle Scout program, demonstrating time management, leadership, teamwork and problem-solving skills.<br>
+                         Boy Scouts of America Troop 727, Kingwood, TXL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2014 - 2022
+                    </div>
+                        <p class="small"></p>
+                        <h3><strong>EDUCATION</strong></h3>
+                    <div class="box">
+                         Full Sail University, Winter Park, FL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022 - 2025<br>
+                         Bachelor of Game Development<br>
+                         99% Attendance
+                    </div>     
         </div>
+        </section>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
