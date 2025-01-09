@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Evan King's Portfolio">
+    <meta name="author" content="Evan King">
+    <title>Evan King Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;700&family=Muli:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #bd5d38;
+            --text-color: #343a40;
+            --bg-color: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Muli', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100vh;
+            background-color: var(--primary-color);
+            padding: 20px;
+        }
+
+        nav .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: block;
+            padding: 10px 0;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        main {
+            margin-left: 250px;
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Saira Extra Condensed', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+
+        .social-icons a {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        .work-item {
+            margin-bottom: 40px;
+        }
+
+        .work-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .education-item, .resume-item {
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+        }
+
+        .contact-info div {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                width: 100%;
+                height: auto;
+                position: static;
+            }
+
+            main {
+                margin-left: 0;
+            }
+
+            .contact-info {
+                flex-direction: column;
+            }
+
+            .contact-info div {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="assets/img/profile.png" alt="Evan King" class="profile-img">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h1>Evan D. King</h1>
+            <p>Winter Park, Florida · (713) 876-1158 · <a href="mailto:edking143@gmail.com">edking143@gmail.com</a></p>
+            <p>I am a student of Full Sail University working towards a degree in Game Development. During my studies, I honed my skills in programming languages and tools such as C++ and gained hands-on experience with game engines such as Unity and Unreal Engine 5 as well as Blueprints.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/evanking143/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/kingdomempire"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+
+        <section id="work">
+            <h2>My Work</h2>
+            <div class="work-item">
+                <h3>Boop-IT Game</h3>
+                <img src="./assets/img/project-1800x600.png" alt="Boop-IT Game">
+                <p>Boop-It is a first-person rhythm platformer where the player speeds through levels by platforming to the beat with their Boop Gun.</p>
+                <p>My role in the project was to design and implement the enemy AI, as well as the level design for 7 of the 15 levels.</p>
+                <ul>
+                    <li>C++</li>
+                    <li>Unity</li>
+                </ul>
+                <p>The Game Link is published on itch.io <a href="https://sloz.itch.io/boop-it"><img src="assets/img/itch-io-32.png" alt="itch.io"></a></p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Full Sail University, Winter Park, Florida</h3>
+                <p>Bachelor of Game Development</p>
+                <p>Artificial Intelligence - Engine Development - Data Structure and Algorithms</p>
+                <p>July 2022 - February 2025</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div>
+                    <i class="fas fa-mobile-alt"></i>
+                    <p>Phone</p>
+                    <p>(713) 876-1158</p>
+                </div>
+                <div>
+                    <i class="far fa-envelope"></i>
+                    <p>Email</p>
+                    <p><a href="mailto:edking143@gmail.com">edking143@gmail.com</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume">
+            <h2>Resume</h2>
+            <div class="resume-item">
+                <h3>Download Options:</h3>
+                <p><a href="https://kingdomempire.github.io/assets/pdf-files/EvanKingResume.pdf" download>Download as PDF</a></p>
+                <p><a href="https://kingdomempire.github.io/assets/docx-files/EvanKingResume.docx" download>Download as DOCX</a></p>
+            </div>
+            <!-- Resume content here -->
+            <section id="resume">
+                <h2>Resume</h2>
+                <div class="download-links">
+                    <h4>Resume Download Options:</h4>
+                    <p><a href="https://kingdomempire.github.io/assets/pdf-files/EvanKingResume.pdf" download>Download as PDF</a></p>
+                    <p><a href="https://kingdomempire.github.io/assets/docx-files/EvanKingResume.docx" download>Download as DOCX</a></p>
+                </div>
+                <div class="text-box">
+                    <header class="header">
+                        <p><strong>Evan D. King</strong></p>
+                        <p><strong>Mobile:</strong> (713) 875-1158 &nbsp;&nbsp;&nbsp;<strong>Email: </strong><a href="mailto:edking143@gmail.com">edking143@gmail.com</a></p>
+                        <p><strong>Portfolio:</strong> <a href="https://kingdomempire.github.io">kingdomempire.github.io</a>&nbsp;&nbsp;&nbsp;<strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/evanking143/">linkedin/in/evanking143</a></p>
+                    </header>
+                    <h3><strong>SUMMARY</strong></h3>
+                    <p>Motivated Game Development graduate, Expected Graduation February 2025, with a rich blend of technical skills and creative insights into dynamic gaming environments. Experienced in crafting engaging game mechanics and immersive, interactive worlds, with a solid grounding in programming and software engineering. Known for a collaborative spirit and a drive for growth, shaped by hands-on team projects and a commitment to staying at the forefront of industry trends. Excited to contribute fresh ideas and technical skills to forward-thinking game projects.</p>
+                    <h3><strong>SOFTWARE</strong></h3>
+                    <ul>
+                        <li><strong>Development Environments:</strong> Visual Studio 2022</li>
+                        <li><strong>Programming Languages:</strong> C++, C#</li>
+                        <li><strong>Game Engines:</strong> Unity, Unreal Engine 5, Unreal Engine 5 Blueprints</li>
+                    </ul>
+                    <!-- Add other sections (SKILLS, PROJECTS and DEVELOPMENT EXPERIENCE, Leadership) similarly -->
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
