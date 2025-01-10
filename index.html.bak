@@ -41,15 +41,55 @@
             font-size: 18px;
             line-height: 1.0;
         }
-
         </style>    
         <style>
         .my-table {
             width: 75%;
         }
-        </style>
-            
-            
+
+        .carousel {
+            position: relative;
+            width: 500px; /* Increased size */
+            height: 400px; /* Increased size */
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .carousel__container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: calc(500px * 4); /* Adjust to match increased image size */
+        }
+
+        .carousel__image {
+            width: 500px; /* Match new carousel width */
+            height: 400px; /* Match new carousel height */
+            object-fit: cover; /* Ensure the image fits properly */
+        }
+
+        .carousel__arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .carousel__arrow--prev {
+            left: 10px;
+        }
+
+        .carousel__arrow--next {
+            right: 10px;
+        }
+
+</style>
+        </style>      
      </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -102,22 +142,26 @@
             <section class="resume-section" id="work">
                 <div class="resume-section-content">
                     <h2 class="mb-5">My Work</h2>
-
                     <div class="work__box">
-                        <div class="work__text">
-                        <h3>Boop-IT Game</h3>
+                    <div class="work__text">
+                    <h3>Boop-IT Game</h3>
+                </div>
+                    <div class="carousel">
+                    <div class="carousel__container">
+                        <img src="./assets/img/Boop-IT_project1_A.png" alt="Project 1 - Image 1" class="carousel__image">
+                        <img src="./assets/img/Boop-IT_project1_B.png" alt="Project 1 - Image 2" class="carousel__image">
+                        <img src="./assets/img/Boop-IT_project1_C.png" alt="Project 1 - Image 3" class="carousel__image">
+                        <img src="./assets/img/Boop-IT_project1_D.png" alt="Project 1 - Image 4" class="carousel__image">
                     </div>
-                        <div class="work__image-box">
-                            <img class="img-fluid" src="./assets/img/project-1800x600.png" class="work__image" alt="Project 1" />
-                            <!--<iframe width="420" height="315"
-                                    src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
-                            </iframe>-->
-                        </div>
+                    <button class="carousel__arrow carousel__arrow--prev">&lt;</button>
+                    <button class="carousel__arrow carousel__arrow--next">&gt;</button>
                     </div>
-                    <br>
+  
+                </div>
+                <br>
                         <p>
                             Boop-It is a first-person rhythm platformer where the player speeds through levels by platforming to the beat with their Boop Gun.
-                        </p>  
+                        </p>
                         <br>
                         <p>
                             My role in the project was to design and implement the enemy AI, as well as the level design for 7 of the 15 levels.
@@ -253,5 +297,34 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              const carouselContainer = document.querySelector(".carousel__container");
+              const images = document.querySelectorAll(".carousel__image");
+              const prevButton = document.querySelector(".carousel__arrow--prev");
+              const nextButton = document.querySelector(".carousel__arrow--next");
+            
+              let currentIndex = 0;
+            
+              const updateCarousel = () => {
+                const imageWidth = images[0].clientWidth; // Dynamically calculate image width
+                const offset = -currentIndex * imageWidth;
+                carouselContainer.style.transform = `translateX(${offset}px)`;
+              };
+            
+              prevButton.addEventListener("click", () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateCarousel();
+              });
+            
+              nextButton.addEventListener("click", () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateCarousel();
+              });
+            
+              // Update carousel on window resize to ensure proper alignment
+              window.addEventListener("resize", updateCarousel);
+            });
+            </script>        
     </body>
 </html>
