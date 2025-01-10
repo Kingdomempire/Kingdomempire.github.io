@@ -41,55 +41,15 @@
             font-size: 18px;
             line-height: 1.0;
         }
+
         </style>    
         <style>
         .my-table {
             width: 75%;
         }
-
-        .carousel {
-            position: relative;
-            width: 500px; /* Increased size */
-            height: 400px; /* Increased size */
-            overflow: hidden;
-            margin: auto;
-        }
-
-        .carousel__container {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: calc(500px * 4); /* Adjust to match increased image size */
-        }
-
-        .carousel__image {
-            width: 500px; /* Match new carousel width */
-            height: 400px; /* Match new carousel height */
-            object-fit: cover; /* Ensure the image fits properly */
-        }
-
-        .carousel__arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.5rem;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            z-index: 2;
-        }
-
-        .carousel__arrow--prev {
-            left: 10px;
-        }
-
-        .carousel__arrow--next {
-            right: 10px;
-        }
-
-</style>
-        </style>      
+        </style>
+            
+            
      </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -144,21 +104,32 @@
                     <h2 class="mb-5">My Work</h2>
 
                     <div class="work__box">
-                    <div class="work__text">
-                    <h3>Boop-IT Game</h3>
-                </div>
-                    <div class="carousel">
-                    <div class="carousel__container">
-                        <img src="./assets/img/Boop-IT_project1_A.png" alt="Project 1 - Image 1" class="carousel__image">
-                        <img src="./assets/img/Boop-IT_project1_B.png" alt="Project 1 - Image 2" class="carousel__image">
-                        <img src="./assets/img/Boop-IT_project1_C.png" alt="Project 1 - Image 3" class="carousel__image">
-                        <img src="./assets/img/Boop-IT_project1_D.png" alt="Project 1 - Image 4" class="carousel__image">
+                        <div class="work__text">
+                        <h3>Boop-IT Game</h3>
                     </div>
-                    <button class="carousel__arrow carousel__arrow--prev">&lt;</button>
-                    <button class="carousel__arrow carousel__arrow--next">&gt;</button>
-                    </div>
-  
-                </div>
+
+                    <div class="work__image-box carousel">
+                        <!-- Carousel Radio Buttons -->
+                        <input type="radio" name="carousel" id="image1" checked>
+                        <input type="radio" name="carousel" id="image2">
+                        <input type="radio" name="carousel" id="image3">
+                    
+                        <!-- Images -->
+                        <div class="carousel__images">
+                          <label for="image3" class="carousel__arrow prev">&lt;</label>
+                          <img src="./assets" alt="Project 1">
+                          <img src="./assets/img/project-2.png" alt="Project 2">
+                          <img src="./assets/img/project-3.png" alt="Project 3">
+                          <label for="image2" class="carousel__arrow next">&gt;</label>
+                        </div>
+                    
+                        <!-- Navigation Dots -->
+                        <div class="carousel__dots">
+                          <label for="image1" class="carousel__dot"></label>
+                          <label for="image2" class="carousel__dot"></label>
+                          <label for="image3" class="carousel__dot"></label>
+                        </div>
+                      </div>
                     </div>
                     
                         <!-- <div class="work__image-box">
@@ -307,34 +278,5 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-              const carouselContainer = document.querySelector(".carousel__container");
-              const images = document.querySelectorAll(".carousel__image");
-              const prevButton = document.querySelector(".carousel__arrow--prev");
-              const nextButton = document.querySelector(".carousel__arrow--next");
-            
-              let currentIndex = 0;
-            
-              const updateCarousel = () => {
-                const imageWidth = images[0].clientWidth; // Dynamically calculate image width
-                const offset = -currentIndex * imageWidth;
-                carouselContainer.style.transform = `translateX(${offset}px)`;
-              };
-            
-              prevButton.addEventListener("click", () => {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                updateCarousel();
-              });
-            
-              nextButton.addEventListener("click", () => {
-                currentIndex = (currentIndex + 1) % images.length;
-                updateCarousel();
-              });
-            
-              // Update carousel on window resize to ensure proper alignment
-              window.addEventListener("resize", updateCarousel);
-            });
-            </script>        
     </body>
 </html>
