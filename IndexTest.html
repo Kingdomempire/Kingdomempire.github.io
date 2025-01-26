@@ -1,163 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Evan King's Portfolio">
-    <meta name="author" content="Evan King">
-    <title>Evan King Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
-    <!-- Font Awesome icons -->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;700&family=Muli:ital,wght@0,400;0,800;1,400;1,800&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        body {
-            font-family: 'Muli', sans-serif;
-        }
-
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <meta name="description" content="Evan King's Portfolio" />
+        <meta name="author" content="Evan King" />
+        <title>Evan King Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
         .text-box {
-            width: 100%;
-            max-width: 1000px;
-            height: auto;
-            border: 1px solid #000;
-            padding: 10px;
-            overflow: auto;
-            margin: 20px auto;
-            background-color: #f9f9f9;
+            width: 1000px;       /* Set the width of the box */
+            height: 800px;      /* Set the height of the box */
+            border: 1px solid #000;  /* Border around the box */
+            padding: 10px;      /* Space inside the box */
+            overflow: auto;     /* Allows scrolling if text overflows */
+            margin-left: 300px; /* Indentation from the left margin */
+            margin-top: 20px; /* Space above the box */
+            background-color: #f9f9f9; /* Light background color */
+            font-family: Arial, sans-serif; /* Font style */
         }
+        
+        .download-links {
+            margin-top: 20px; /* Space between the box and the links */
+            margin-right: 50px; /* Indentation for the links */
+        }
+        
+        p.small {
+            line-height: 1.7;
+            }
 
         .header {
             text-align: center;
-            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 1.0;
         }
 
-        .resume-header {
-            text-align: left;
-            margin-bottom: 30px;
+        </style>    
+        <style>
+        .my-table {
+            width: 75%;
+        }
+        .subheading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.rem;
+            margin-bottom: 0.5rem;
+        }     
+
+        .date {
+            font-size: 1.rem;
+            color: #555; /* Optional: Gives the date a slightly muted color */
         }
 
-        .work__image {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 5px;
+        .mb-1 {
+            margin-bottom: 1rem; /* Adjust spacing as needed */
         }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <a class="navbar-brand" href="#page-top">
-            <img class="img-fluid img-profile rounded-circle mx-auto" src="assets/img/profile.png" alt="Evan King">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#work">My Work</a></li>
-                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- About Section -->
-    <section id="about" class="p-4">
-        <div class="container">
-            <h2>About</h2>
-            <p>I am Evan King, a student of Full Sail University pursuing a degree in Game Development. I have honed my skills in programming languages like C++ and game engines such as Unity and Unreal Engine 5. My goal is to contribute to innovative and engaging gaming experiences.</p>
-        </div>
-    </section>
-
-    <!-- My Work Section -->
-    <section id="work" class="p-4">
-        <div class="container">
-            <h2>My Work</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="./assets/img/project-1800x600.png" alt="Project 1" class="work__image">
-                    <h4>Project 1</h4>
-                    <p>Boop-It is a first-person rhythm platformer where the player speeds through levels by platforming to the beat with their Boop Gun.</p>
-                    <p>My role in the project was to design and implement the enemy AI, as well as the level design for 7 of the 15 levels.</p>
-                </div>
-                <ul class="work__list">
-                    <li>C++</li>
-                    <li>Unity</li>
+        </style>
+            
+            
+     </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Evan King</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.png" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#work">My Work</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#resume">Resume</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li> -->
                 </ul>
-                <br>
-                <div class="work__links">
-                    The Game Link is published on itch.io <span>&rarr;</span>
-                    <a href="https://sloz.itch.io/boop-it"><img src="assets/img/itch-io-32.png"></a>
-                    </a>
-                    </a>
-                </div>
-                <hr size="5" width="85%" align="left" color="##000000">
-                <br>
-                
-                <div class="col-md-4">
-                    <img src="assets/img/project2.png" alt="Project 2" class="work__image">
-                    <h4>Project 2</h4>
-                    <p>Brief description of Project 2. This project highlights my expertise in C++ and Unreal Engine.</p>
-                </div>
-                <div class="col-md-4">
-                    <img src="assets/img/project3.png" alt="Project 3" class="work__image">
-                    <h4>Project 3</h4>
-                    <p>Brief description of Project 3. This project demonstrates my ability to create engaging gaming experiences.</p>
-                </div>
-     
             </div>
-        </div>
-    </section>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        <h2>Evan D. King</h2>
+                        <!-- <span class="text-primary">King</span>
+                    </h1> -->
+                    <div class="subheading mb-5">
+                        Winter Park, Florida · <a href="tel:713-876-1158">(713) 876-1158</a> ·
+                            <a href="mailto:edking143@gmail.com">edking143@gmail.com</a>
+                          </a>
+                    </div>
+                    <h2 class="mb-5">About</h2>
+                    <p>I am a student of Full Sail University working towards a degree in Game Development, Expected Graduation February 2025. During my studies, I honed my skills in Visual Studio as well as programming languages and tools, such as; C# and C++. I gained hands-on experience with game engines such as Unity, Unreal Engine 5 and Blueprints.</p>
+                    <br>
+                    <br>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/evanking143/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/kingdomempire"><i class="fab fa-github"></i></a>
+                        <!-- <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a> -->
+                        <!-- <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a> -->
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- My Work-->
+            <section class="resume-section" id="work">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">My Work</h2>
 
-    <!-- Resume Section -->
-    <section id="resume" class="p-4 bg-light">
-        <div class="container">
-            <h2>Resume</h2>
-            <p>Download my resume:</p>
-            <ul>
-                <li><a href="https://kingdomempire.github.io/assets/pdf-files/EvanKingResume.pdf" download>Download as PDF</a></li>
-                <li><a href="https://kingdomempire.github.io/assets/docx-files/EvanKingResume.docx" download>Download as DOCX</a></li>
-            </ul>
-            <div class="resume-header">
-                <p><strong>Evan D. King</strong></p>
-                <p><strong>Mobile:</strong> (713) 876-1158</p>
-                <p><strong>Email:</strong> <a href="mailto:edking143@gmail.com">edking143@gmail.com</a></p>
-                <p><strong>Portfolio:</strong> <a href="https://kingdomempire.github.io">kingdomempire.github.io</a></p>
-            </div>
-            <h3>Summary</h3>
-            <p>Recent Game Development graduate with technical skills and creative insight to craft immersive gaming environments.</p>
-            <h3>Skills</h3>
-            <ul>
-                <li>Programming Languages: C++, C#</li>
-                <li>Game Engines: Unity, Unreal Engine 5</li>
-                <li>Soft Skills: Communication, Team Collaboration</li>
-            </ul>
+                    <div class="work__box">
+                        <div class="work__text">
+                        <h3>Boop-IT Game</h3>
+                    </div>
+                        <div class="work__image-box">
+                            <img class="img-fluid" src="./assets/img/project-1800x600.png" class="work__image" alt="Project 1" />
+                            <!--<iframe width="420" height="315"
+                                    src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+                            </iframe>-->
+                        </div>
+                    </div>
+                    <br>
+                        <p>
+                            Boop-It is a first-person rhythm platformer where the player speeds through levels by platforming to the beat with their Boop Gun.
+                        </p>  
+                        <br>
+                        <p>
+                            My role in the project was to design and implement the enemy AI, as well as the level design for 7 of the 15 levels.
+                        </p>
+                        <ul class="work__list">
+                            <li>C++</li>
+                            <li>Unity</li>
+                        </ul>
+                        <br>
+                        <div class="work__links">
+                            The Game Link is published on itch.io <span>&rarr;</span>
+                            <a href="https://sloz.itch.io/boop-it"><img src="./assets/img/itch-io-32.png"></a>
+                            </a>
+                            </a>
+                        </div>
+                        <hr size="5" width="85%" align="left" color="##000000">
+                        <br>
+                    <div class="work__box">
+                </div>
+            </section>
+            <hr class="m-0" /> 
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <div class="mb-0"><img src="./assets/img/FullSailLogo.png"></div>
+                            <div class="subheading mb-1"><span>Bachelor of Science Game Development</span>
+                                <span class="date">July 2022 - February 2025</span>
+                              </div>
+                              <div>
+                                <strong>Engine Development - Data Structure and Algorithms - Artificial Intelligence</strong>
+                              </div>
+                </div>
+            </section>
+            <hr class="m-0" />    
+            <!-- Contact-->        
+            <section class="resume-section" id="contact">
+                <div class="resume-section-content">                       
+                    <h2 class="mb-5">Contact</h2>
+            <div class="container"></div> 
+                <div class="text-center"></div>
+                <div class="row">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4">
+                            <div class="d-flex flex-column align-items-center">
+                                <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
+                                <div class="text-muted">Phone</div>
+                                <div class="lead font-weight-bold"><a href="tel:713-876-1158">(713) 876-1158</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="d-flex flex-column align-items-center">
+                                <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
+                                <div class="text-muted">Email</div><a class="lead font-weight-bold" href="mailto:edking143@gmail.com">edking143@gmail.com</a>
+                            </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Resume-->
+            <section class="resume-section" id="resume">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Resume</h2>  
+                    <br>
+                    <div>
+                        <h4>Resume Download Options:</h4>
+                        <a href="https://kingdomempire.github.io/assets/pdf-files/EvanKingResume.pdf" download>Download as PDF</a><br>
+                        <a href="https://kingdomempire.github.io/assets/docx-files/EvanKingResume.docx" download>Download as DOCX</a>
+                    </div>
+                    <br>
+                        <hr size="5" width="85%" align="left" color="##000000"> 
+                <!-- Resume Header-->        
+                <header class="header">
+                            <p><a><strong>Evan D. King</strong></a>
+                                <p><a><strong>Mobile:</strong> <a href="tel:713-876-1158">(713) 876-1158</a> &nbsp;&nbsp;&nbsp;<strong>Email: </strong><a href="mailto:edking143@gmail.com">edking143@gmail.com</a></p>                         
+                                <p><a><strong>Portfolio:</strong> <a href="https://kingdomempire.github.io"><u>kingdomempire.github.io</u></a><strong>&nbsp;&nbsp;&nbsp; LinkedIn: </strong> <a href="https://www.linkedin.com/in/evanking143/">linkedin/in/evanking143</a></p>
+                </header> 
+                        <h3><strong>SUMMARY</strong></h3>
+                    <div class="box">
+                            <ul>
+                                <ul>Motivated Game Development graduate, Expected Graduation February 2025, with a rich blend of technical skills and creative insights into dynamic gaming environments. Experienced in crafting engaging game mechanics and immersive, interactive worlds, with a solid grounding in programming and software engineering. Known for a collaborative spirit and a drive for growth, shaped by hands-on team projects and a commitment to staying at the forefront of industry trends. Excited to contribute fresh ideas and technical skills to forward-thinking game projects.</ul>
+                            </ul>
+                    </div>
+                        <p class="small"></p>
+                        <h3><strong>SOFTWARE</strong></h3>
+                    <div class="box">
+                        <ul>
+                            <ul><strong>Development Environments:</strong> Visual Studio 2022</ul>
+                            <ul><strong>Programming Languages:</strong> C++, C#</ul>
+                            <ul><strong>Game Engines:</strong> Unity, Unreal Engine 5, Unreal Engine 5 Blueprints</ul>
+                        </ul>                              
+                    </div>
+                    <p class="small"></p>
+                        <h3><strong>SKILLS</strong></h3>
+                    <div class="box">
+                            <ul>
+                                <ul><strong>Game Development:</strong> Artificial Intelligence (AI), Game and Computer Architecture.</ul>
+                                <ul><strong>Game Design & AI:</strong> Creating realistic and challenging AI behaviors and lifelike interactions..</ul>
+                                <ul><strong>Game Design Quality:</strong> Designing and delivering high-quality game products.</ul>
+                                <ul><strong>Tools & Frameworks:</strong> GitHub version control, team collaboration.</ul>
+                                <ul><strong>Technical Knowledge:</strong> Game development cycles; preproduction to completion.</ul>
+                                <ul><strong>Soft Skills:</strong> Verbal and written Communication, Team collaboration, and independent work.</ul>  
+                            </ul>
+                        </div>
+                        <p class="small"></p>
+                        <h3><strong>PROJECTS and DEVELOPMENT EXPERIENCE</strong></h3>
+                    <div class="box">
+                           <ul>
+                            <ul><strong>Enemy Creation:</strong> Designed two unique enemies and two Boss enemies using C++, implementing complex AI behaviors that enhanced game-play depth and strategic challenges.</ul>
+                            <ul><strong>Random Dungeon Generator:</strong> Built a blueprint-based dungeon generator in Unreal Engine 5, creating randomized environments and adaptive challenges that responded to player exploration and progression.</ul>
+                            <ul><Strong>In-Game UI Components:</Strong> Designed and implemented intuitive UI components to facilitate seamless player interaction with the game.</ul>
+                            <ul><Strong>Game Pickup/interact System:</Strong> Created pickup/interact system with C++ in Unreal Engine using Traces/RayCasts for picking up items and interacting with interactables.</ul>
+                           </ul>
+                    </div>  
+                        <p class="small"></p>
+                        <h3><strong>Leadership</strong></h3>
+                    <div class="box">
+                       <ul>
+                        <ul><strong>Eagle Scout</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp May 5, 2022</ul>
+                         <ul>Time management, Leadership, Teamwork and Problem-solving skills.</ul>
+                       </ul>  
+                    </div>
+                        <p class="small"></p>
+                        <h3><strong>EDUCATION</strong></h3>
+                    <div class="box">
+                        <ul>
+                            <ul>Full Sail University, Winter Park, FL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022 - 2025</ul>
+                            <ul><strong>Bachelor of Science in Game Development B.S.</strong></ul>
+                        </ul>
+                    </div>     
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="p-4">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>If you would like to get in touch, please use the following contact information:</p>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:edking143@gmail.com">edking143@gmail.com</a></li>
-                <li><strong>Phone:</strong> (713) 876-1158</li>
-                <li><strong>Portfolio:</strong> <a href="https://kingdomempire.github.io">kingdomempire.github.io</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+        </section>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
