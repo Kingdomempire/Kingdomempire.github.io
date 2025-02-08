@@ -14,7 +14,8 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <style>
+    <style>
+
         .text-box {
             width: 1000px;       /* Set the width of the box */
             height: 800px;      /* Set the height of the box */
@@ -42,14 +43,117 @@
             line-height: 1.0;
         }
 
-        </style>    
-        <style>
+
+        .video-container {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            width: 560px;
+            height: 315px;
+        }
+    
+        .video-container img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.6);
+            transition: background 0.3s ease, transform 0.2s ease-in-out;
+        }
+
+        .play-overlay svg {
+            width: 80px;
+            height: 80px;
+        }
+
+        .video-container:hover .play-overlay {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+  
         .my-table {
             width: 75%;
         }
-        </style>
-            
-            
+        /* Fix large gap above the Education section */
+        #education {
+            margin-top: 0px !important; /* Remove extra spacing */
+            padding-top: 10px; /* Adjust as needed */
+        }
+
+        /* Ensure the h2 inside Education has no extra margin */
+        #education h2 {
+            margin-top: 10px; /* Reduce spacing above the title */
+        }
+
+        /* Apply consistent left alignment to all major section titles */
+        .resume-section-content h1,
+        .resume-section-content h2,
+        #contact h2 {
+            text-align: left;
+            margin-left: 20px; /* Moves all titles closer to the left */
+        }
+
+        /* Align overall section content */
+        .resume-section-content,
+        #contact {
+            padding-left: 20px; /* Ensures content starts at the same left margin */
+        }
+
+        /* Center Contact Content */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center; /* Centers email & social media */
+        }
+
+        /* Center Social Media Icons */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            font-size: 32px;
+            color: #000; /* Default color */
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-media a:hover {
+            color: #0073e6; /* Hover effect */
+        }
+
+        /* Centering Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333; /* Dark background */
+            color: white;
+        }
+
+    </style>  
+                       
      </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -64,8 +168,8 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#work">My Work</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                     <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li> -->
                     <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li> -->
                 </ul>
@@ -73,11 +177,13 @@
         </nav>
         <!-- Page Content-->
         <div class="container-fluid p-0">
+            
             <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
                     <h1 class="mb-0">
-                        <h2>Evan D. King</h2>
+                        <h2 class="mb-5">About</h2>
+                        <h3>Evan D. King</h3>
                         <!-- <span class="text-primary">King</span>
                     </h1> -->
                     <div class="subheading mb-5">
@@ -85,36 +191,102 @@
                             <a href="mailto:edking143@gmail.com">edking143@gmail.com</a>
                           </a>
                     </div>
-                    <h2 class="mb-5">About</h2>
-                    <p>I am a student of Full Sail University working towards a degree in Game Development, Expected Graduation February 2025. During my studies, I honed my skills in Visual Studio as well as programming languages and tools, such as; C# and C++. I gained hands-on experience with game engines such as Unity, Unreal Engine 5 and Blueprints.</p>
+                    <p>I am a graduate of Full Sail University with a Bachlors of Science Degree in Game Development. During my studies, I honed my skills in Visual Studio as well as programming languages and tools, such as; C# and C++. I gained hands-on experience with game engines such as Unity, Unreal Engine 5 and Blueprints.</p>
                     <br>
-                    <br>
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/evanking143/"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="https://github.com/kingdomempire"><i class="fab fa-github"></i></a>
-                        <!-- <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a> -->
-                        <!-- <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a> -->
-                    </div>
                 </div>
+            <!-- End of About-->
+        
             </section>
             <hr class="m-0" />
+            
             <!-- My Work-->
             <section class="resume-section" id="work">
                 <div class="resume-section-content">
                     <h2 class="mb-5">My Work</h2>
-
-                    <div class="work__box">
-                        <div class="work__text">
-                        <h3>Boop-IT Game</h3>
+            
+                <div class="work__box">
+                    <div class="work__text">
+                    <h3>First-person Rhythm Platformer Game</h3>
+                </div>
+            
+                <div class="video-container" id="videoWrapper" onclick="loadVideo()">
+                    <img id="videoThumbnail" src="assets/img/project-1.png" alt="Click to play">
+                    <div class="play-overlay">
+                    <svg width="80" height="80" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="48" stroke="white" stroke-width="4" fill="rgba(0, 0, 0, 0.6)" />
+                    <polygon points="35,25 75,50 35,75" fill="white"/>
+                    </svg>
                     </div>
-                        <div class="work__image-box">
-                            <img class="img-fluid" src="./assets/img/project-1800x600.png" class="work__image" alt="Project 1" />
-                            <!--<iframe width="420" height="315"
-                                    src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
-                            </iframe>-->
-                        </div>
-                    </div>
-                    <br>
+                </div>
+            
+                <script>
+                    let player;
+                    let youtubeAPIReady = false;
+            
+                    function loadYouTubeAPI() {
+                        if (!youtubeAPIReady) {
+                            let tag = document.createElement("script");
+                            tag.src = "https://www.youtube.com/iframe_api";
+                            document.body.appendChild(tag);
+                            youtubeAPIReady = true;
+                            }
+                        }
+            
+                // Ensure API is loaded before trying to create the video player
+                    function onYouTubeIframeAPIReady() {
+                        youtubeAPIReady = true;
+                        }
+            
+                        function loadVideo() {
+                        const videoContainer = document.getElementById("videoWrapper");
+            
+                // Remove play button and replace with player container
+                        videoContainer.innerHTML = `<div id="player"></div>`;
+            
+                // Load YouTube API if not already loaded
+                        loadYouTubeAPI();
+            
+                // Ensure YouTube API is ready before creating the player
+                        let checkAPIInterval = setInterval(() => {
+                            if (youtubeAPIReady && window.YT && YT.Player) {
+                                clearInterval(checkAPIInterval);
+                                player = new YT.Player("player", {
+                                height: "315",
+                                width: "560",
+                                videoId: "C40TUgm7eJA",
+                                playerVars: { autoplay: 1, rel: 0 },
+                                events: {
+                                "onReady": function(event) {
+                                event.target.unMute();
+                                },
+                                "onStateChange": onPlayerStateChange
+                                }
+                                    });
+                                }
+                            }, 100); // Check every 100ms until API is ready
+                        }
+            
+                        function onPlayerStateChange(event) {
+                            if (event.data === YT.PlayerState.ENDED) {
+                                resetToThumbnail();
+                            }
+                        }
+            
+                        function resetToThumbnail() {
+                        const videoContainer = document.getElementById("videoWrapper");
+                        videoContainer.innerHTML = `
+                            <img id="videoThumbnail" src="assets/img/project-1.png" alt="Click to play">
+                            <div class="play-overlay">
+                                <svg width="80" height="80" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" stroke="white" stroke-width="4" fill="rgba(0, 0, 0, 0.6)" />
+                                <polygon points="35,25 75,50 35,75" fill="white"/>
+                            </svg>
+                        </div>`;
+                        videoContainer.onclick = loadVideo;
+                        }
+                    </script>
+            
+                        <br>
                         <p>
                             Boop-It is a first-person rhythm platformer where the player speeds through levels by platforming to the beat with their Boop Gun.
                         </p>  
@@ -126,16 +298,7 @@
                             <li>C++</li>
                             <li>Unity</li>
                         </ul>
-                        <br>
-                        <div class="work__links">
-                            The Game Link is published on itch.io <span>&rarr;</span>
-                            <a href="https://sloz.itch.io/boop-it"><img src="./assets/img/itch-io-32.png"></a>
-                            </a>
-                            </a>
-                        </div>
-                        <hr size="5" width="85%" align="left" color="##000000">
-                        <br>
-                    <div class="work__box">
+                    </div>
                 </div>
             </section>
             <hr class="m-0" /> 
@@ -146,50 +309,30 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <div class="mb-0"><img src="./assets/img/FullSailLogo.png"></div>
-                            <div class="subheading mb-1">Bachelor of Science Game Development&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; July 2022 - February 2025</div>
+                            <div class="subheading mb-1">Bachelor of Science Game Development &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; July 2022 - February 2025</div>
                             <div><strong>Engine Development - Data Structure and Algorithms - Artifical Intelligence</strong> </div>
                         </div>
                 </div>
             </section>
+
+            <!-- End of My Work-->
             <hr class="m-0" />    
-            <!-- Contact-->        
-            <section class="resume-section" id="contact">
-                <div class="resume-section-content">                       
-                    <h2 class="mb-5">Contact</h2>
-            <div class="container"></div> 
-                <div class="text-center"></div>
-                <div class="row">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4">
-                            <div class="d-flex flex-column align-items-center">
-                                <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
-                                <div class="text-muted">Phone</div>
-                                <div class="lead font-weight-bold"><a href="tel:713-876-1158">(713) 876-1158</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="d-flex flex-column align-items-center">
-                                <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
-                                <div class="text-muted">Email</div><a class="lead font-weight-bold" href="mailto:edking143@gmail.com">edking143@gmail.com</a>
-                            </div>
-                </div>
-            </section>
-            <hr class="m-0" />
+            
             <!-- Resume-->
             <section class="resume-section" id="resume">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Resume</h2>  
                     <br>
                     <div>
-                        <h4>Resume Download Options:</h4>
-                        <a href="https://kingdomempire.github.io/assets/pdf-files/EvanKingResume.pdf" download>Download as PDF</a><br>
-                        <a href="https://kingdomempire.github.io/assets/docx-files/EvanKingResume.docx" download>Download as DOCX</a>
-                    </div>
-                    <br>
+                         <h4>Resume Download Options:</h4> <a href="https://kingdomempire.github.io/assets/pdf-files/EvanKingResume.pdf" download>Download as PDF</a>&nbsp;
+                            <a href="https://kingdomempire.github.io/assets/docx-files/EvanKingResume.docx" download>Download as DOCX</a>
+                            </P>
+
                         <hr size="5" width="85%" align="left" color="##000000"> 
+                
                 <!-- Resume Header-->        
                 <header class="header">
-                            <p><a><strong>Evan D. King</strong></a>
+                            <p><a><h3>Evan D. King</h3></a>
                                 <p><a><strong>Mobile:</strong> <a href="tel:713-876-1158">(713) 876-1158</a> &nbsp;&nbsp;&nbsp;<strong>Email: </strong><a href="mailto:edking143@gmail.com">edking143@gmail.com</a></p>                         
                                 <p><a><strong>Portfolio:</strong> <a href="https://kingdomempire.github.io"><u>kingdomempire.github.io</u></a><strong>&nbsp;&nbsp;&nbsp; LinkedIn: </strong> <a href="https://www.linkedin.com/in/evanking143/">linkedin/in/evanking143</a></p>
                 </header> 
@@ -249,8 +392,41 @@
                             <ul>99% Attendance</ul>
                         </ul>
                     </div>     
+                </div>
+            </section>
+        
+            <!-- End of Resume -->
+
+    <!-- Section Divider line -->
+    <hr class="section-divider"> 
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+        <h2>Contact</h2> <!-- Left-aligned, now matching Resume -->
+        <div class="contact-container">
+            <p><strong>Please feel free to send me an Email:</strong> 
+                <a href="mailto:edking143@gmail.com">edking143@gmail.com</a>
+            </p>
+            
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/evanking143/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/kingdomempire" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
         </div>
-        </section>
+    </section>
+    
+   
+    <!-- End of CONTACT -->
+
+    <footer>
+        <p>&copy; 2025 Evan D. King. All rights reserved.</p>
+    </footer>   
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
