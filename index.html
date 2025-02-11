@@ -2,8 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" /> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
         <meta name="description" content="Evan King's Portfolio" />
         <meta name="author" content="Evan King" />
         <title>Evan King Portfolio</title>
@@ -120,11 +119,23 @@
             padding-left: 20px; /* Ensures content starts at the same left margin */
         }
 
+        #contact {
+            text-align: center; /* Centers everything in the section */
+            padding: 40px 15px; /* Adds spacing around the section */
+        }
+
         /* Center Contact Content */
         .contact-container {
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto; /* Ensures it stays centered */
             text-align: center; /* Centers email & social media */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Aligns items in the center */
+        }
+
+        .contact-container p {
+            margin-bottom: 15px;
         }
 
         /* Center Social Media Icons */
@@ -410,11 +421,11 @@
     <!-- CONTACT -->
 
     <section class="resume-section" id="contact">
-        <h2>Contact</h2> <!-- Left-aligned, now matching Resume -->
-        <div class="contact-container">
-            <p><strong>Please feel free to send me an Email:</strong> 
-                <a href="mailto:edking143@gmail.com">edking143@gmail.com</a>
-            </p>
+        <div class="resume-section-content">
+            <h2 class="mb-5">Contact</h2> <!-- Heading now on its own line -->
+    
+            <p><strong>Please feel free to send me an Email:</strong></p>
+            <p><a href="mailto:edking143@gmail.com">edking143@gmail.com</a></p>
             
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/evanking143/" target="_blank">
@@ -427,7 +438,7 @@
         </div>
     </section>
     
-   
+    
     <!-- End of CONTACT -->
 
     <footer>
